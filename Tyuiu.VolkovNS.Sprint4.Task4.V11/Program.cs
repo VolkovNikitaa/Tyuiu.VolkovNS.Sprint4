@@ -1,4 +1,4 @@
-﻿using Tyuiu.VolkovNS.Sprint4.Task3.V20.Lib;
+﻿using Tyuiu.VolkovNS.Sprint4.Task4.V11.Lib;
 
 internal class Program
 {
@@ -10,19 +10,25 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #4                                                               *");
         Console.WriteLine("* Тема: Двумерные массивы (статический ввод)                              *");
-        Console.WriteLine("* Задание #3                                                              *");
-        Console.WriteLine("* Вариант #20                                                             *");
+        Console.WriteLine("* Задание #4                                                              *");
+        Console.WriteLine("* Вариант #11                                                             *");
         Console.WriteLine("* Выполнил: Волков Никита Сергеевич | ПКТб-25-1                           *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
-        Console.WriteLine("* Найти минимальный элемент первого столбца массива                       *");
+        Console.WriteLine("* Найдите сумму нечетных элементов массива                                *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-        int[,] array = new int[5, 5] { { 8, 7, 7, 8, 5 },{4,3,5,3,6},{5,3,8,6,3},{ 6, 3, 8, 5, 4},{ 3, 6, 8, 3, 4} };
-
+        int[,] array = new int[5, 5];
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                array[i,j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
         Console.WriteLine("Ответ: " + ds.Calculate(array));
     }
 }
